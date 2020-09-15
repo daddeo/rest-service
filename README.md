@@ -1,7 +1,7 @@
 # rest-service
 ---
 
-A simple REST service accepting a list of email addresses, in JSON format (see below), and return an integer indicating the number of unique email addresses.
+A simple Jersey REST service accepting a list of email addresses, in JSON format (see below), and return an integer indicating the number of unique email addresses.
 
 ### Input
 { "list": ["{email address}", "{email address}", ..., "{email address}"] }
