@@ -16,16 +16,16 @@ GET http://{server}:{port}/services/rest/unique-email-address-check/test
 ### Body Format
 { "list": ["{email address}", "{email address}", ..., "{email address}"] }
 
-examples:
-
-- { "list": ["freddie@mac.com", "fannie@mac.com", "sallie@mae.com"] }
-> returns 3
-- { "list": ["test.email@gmail.com", "test.email+spam@gmail.com", "testemail@gmail.com"] }
-> returns 1
-- { "list": ["test.email@gmail.com", "test.email@fetchrewards.com"] }
-> returns 2
-
 ### Output
 Unique email addresses means they will be delivered to different accounts using Gmail account matching.
 Gmail will ignore the placement of "." in the username and will ignore any portion of the username after a "+".
+
+examples:
+
+- in:  { "list": ["freddie@mac.com", "fannie@mac.com", "sallie@mae.com"] }
+> out: 3
+- in:  { "list": ["test.email@gmail.com", "test.email+spam@gmail.com", "testemail@gmail.com"] }
+> out: 1
+- in:  { "list": ["test.email@gmail.com", "test.email@fetchrewards.com"] }
+> out: 2
 
