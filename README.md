@@ -18,3 +18,14 @@ Gmail will ignore the placement of "." in the username and will ignore any porti
 > returns 1
 - { "list": ["test.email@gmail.com", "test.email@fetchrewards.com"] }
 > returns 2
+
+### Usage
+
+POST http://localhost:8080/services/rest/unique-email-address-check
+`Content-Type`: `application/json`.
+`Accept`: `text/plain`.
+`Body` : `{ "list": ["test.email@gmail.com", "test.email@fetchrewards.com"] }`.
+
+GET http://localhost:8080/services/rest/unique-email-address-check/test
+
+return `ok` if successful.
